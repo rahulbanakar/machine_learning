@@ -1,0 +1,57 @@
+AirProbe Assignment
+
+Problem statement: 
+Build and train a system to detect if a given image is of a Vada-pav or not! 
+Abstract:
+	This is a deep neural network model to predict whether the image is vadapav or not. According to problem statement, we can conclude that it’s a binary image classification problem. So, its preferable to use CNN as it’s advantages over other image classification algorithms over finding the features even with limited number of images. Data augmentation can be used to prepare more data for the model.
+1.	Data collection 
+
+	This plays a crucial role in training the model. 
+	Model will be as good as we train it on more data.
+	All the images are stored in data folder. Nearly 160 images are collected initially divided into vadapav and non vadapav folders. 
+	40 images are kept for validation
+
+2.	Data augmentation
+
+	Over 1920 images are formed with rotating, resizing, zooming in the images. 
+	Model is being trained on all these augmented images.
+	This helps in finding every single feature describing the image.
+	This helps the model to understand the image in every single aspect of its feature.
+
+3.	Model training 
+
+	Model is trained on CNN architecture.
+o	CNN is very effective in finding the features from images unlike the old classification algorithms namely SVM which are trained with limited number of features which does not account for spatial interaction of pixels.  
+o	More over CNN also can have a fully connected feed-forward neural network. 
+o	It also possesses the ability of adaptive image processing. 
+
+	Keras is used 
+o	using Keras package as its capable of running on tensorflow, CNTK and theano.
+o	Keras simple architecture of layers makes it suitable for neural networks.
+o	Keras is also capable for image augmentation.
+
+	Binary cross entropy is used to calculate the error for prediction.
+o	As it’s a 2 class classification problem, I am using binary cross entropy to calculate the error. 
+o	It defines the log of the probability of a image belonging to either class.
+
+	Softmax is used as activation function. 
+o	This is specially used in neural networks. 
+o	It converts any vector in real numbers in to any number, which  then normalizes into interval ( 0, 1) which then can be referred as probability. 
+
+Training the model:
+	Model is been trained on image size of 150,150 pixels over 150 epochs.
+	After training, loss is been reduced below 1 %.
+Initial training of the model
+
+
+4.	Improvements to model
+
+	Image segmentation can be added.
+	Transfer learning using ResNet
+Folder structure : 
+Data -> contains all images
+Data ->Train : Contains all images used for training the model.
+Data -> test : Contais all the images used for 
+Model -> Contains models and weights saved for future use.
+Github
+https://github.com/rahulbanakar/machine_learning/tree/ML/airprobe
