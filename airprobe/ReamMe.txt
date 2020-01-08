@@ -1,0 +1,15 @@
+This folder contains all the data and coding files.
+
+Folder structure
+
+Data -> contains all images
+Data ->Train : Contains all images used for training the model.
+Data -> test : Contais all the images used for 
+Model -> Contains models and weights saved for future use.
+
+
+LoadData.py  -> This file loads all the images and performs image augmentation on it to generate more images.
+
+TrainModel.py  -> This file traines the model based on CNN architecture.
+
+TestModel  -> This file loads he model trained by TrainModel.py files and predicts the output.
